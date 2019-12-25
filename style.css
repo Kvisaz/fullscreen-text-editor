@@ -13,6 +13,10 @@ html, body, #input {
     padding: 64px;
 }
 
+p {
+    margin-bottom: 12px;
+}
+
 .theme-darcula {
     background: #2a2e39;
     color: darkkhaki;

@@ -12,7 +12,12 @@ const Repository = {
 };
 
 const InputWrapper = {
-    INPUT_ELEMENT: document.querySelector('#input'),
+    INPUT_ELEMENT: null,
+
+    init() {
+        this.INPUT_ELEMENT = document.querySelector('#input');
+        document.execCommand("defaultParagraphSeparator", false, "p");
+    },
 
     getText() {
         return this.INPUT_ELEMENT.innerHTML;
@@ -30,7 +35,7 @@ const App = {
 
     initData() {
         const saved = Repository.load();
-        InputWrapper.setText(saved);
+        if (saved.length > 0) InputWrapper.setText(saved);
     },
 
     initTimer() {
@@ -43,6 +48,7 @@ const App = {
     },
 
     run() {
+        InputWrapper.init();
         this.initData();
         this.initTimer();
     }
