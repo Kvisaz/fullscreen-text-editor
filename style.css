@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 24px;
+}
+
+html, body, #input {
+    height: 100%;
+}
+
+#input {
+    padding: 64px;
+}
+
+.theme-darcula {
+    background: #2a2e39;
+    color: darkkhaki;
+}
